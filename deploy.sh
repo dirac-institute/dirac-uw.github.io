@@ -31,7 +31,7 @@ tar cf - --exclude public --exclude .git --exclude old --exclude *~ . | (cd publ
 		git commit -m "Source built from $REV" -q
 
 		# Push source and build repos.
-#		git push
+		git push
 	else
 		echo -e "\033[0;32m==== Site unchanged, skipping deployment... ====\033[0m"
 	fi
