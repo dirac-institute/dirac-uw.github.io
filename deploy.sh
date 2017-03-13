@@ -6,10 +6,12 @@ set -e
 #    echo "The working directory is dirty. Please commit any pending changes."
 #    exit 1;
 #fi
+REV=$(git describe --always --dirty)
 
 # Make sure we've got sumo
 git submodule init
 git submodule update
+(cd public && git checkout master)
 
 echo -e "\033[0;32m============== Generating site... ==============\033[0m"
 rm -rf public/*
