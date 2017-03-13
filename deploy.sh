@@ -11,7 +11,7 @@ REV=$(git describe --always --dirty)
 # Make sure we've got sumo
 git submodule init
 git submodule update
-(cd public && git checkout master)
+(cd public && git checkout master -q)
 
 echo -e "\033[0;32m============== Generating site... ==============\033[0m"
 rm -rf public/*
